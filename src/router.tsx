@@ -1,4 +1,4 @@
-import { lazy } from 'react';
+yimport { lazy } from 'react';
 import { createBrowserRouter, Navigate } from 'react-router-dom';
 import AppHelmet from './AppHelmet';
 import AppLayout from './AppLayout';
@@ -16,6 +16,7 @@ const AdminBilling = lazy(() => import('./pages/AdminBilling'));
 const AppSettings = lazy(() => import('./pages/AppSettings/AppSettings'));
 const AppUsers = lazy(() => import('./pages/AppUsers'));
 const Profile = lazy(() => import('./pages/Profile'));
+const NovaWallet = lazy(() => import('./pages/NovaWallet'));
 const UserSettings = lazy(() => import('./pages/UserSettings/UserSettings'));
 const ProfileEdit = lazy(() => import('./pages/ProfileEdit'));
 
@@ -110,7 +111,10 @@ export const router = createBrowserRouter(
                   ],
                 },
 
-                {
+                {{
+  path: 'nova/wallet',
+  Component: NovaWallet,
+},
                   path: 'profile',
                   Component: Profile,
                 },
