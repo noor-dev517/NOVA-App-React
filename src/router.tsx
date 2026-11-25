@@ -7,6 +7,7 @@ import ForgetPassword from './pages/AuthPage/ForgetPassword';
 import LoginComponent from './pages/AuthPage/Login';
 import Register from './pages/AuthPage/Register';
 import Chat from './pages/Chat';
+import NovaWallet from './NovaWallet';
 import { Error404Page } from './pages/ErrorPage/Error404Page';
 import { RouterErrorElement } from './components/Error/RouterErrorBoundary';
 const Admin = lazy(() => import('./pages/Admin'));
@@ -65,6 +66,10 @@ export const router = createBrowserRouter(
                   path: 'chat',
                   Component: Chat,
                 },
+                {
+  path: 'wallet',
+  Component: NovaWallet,
+},
                 {
                   path: 'admin',
                   Component: () => (
