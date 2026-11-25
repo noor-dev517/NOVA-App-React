@@ -9,6 +9,7 @@ import { withTracking } from './hooks/withTracking';
 import { useAppStore } from './store/useAppStore';
 import { initFirebase } from './utils/firebase';
 import { useHandleRedirectLogin } from './hooks/useHandleRedirectLogin';
+import NovaWallet from './NovaWallet';
 
 export function Fallback() {
   return <p>Performing initial data load</p>;
